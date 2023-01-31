@@ -286,6 +286,7 @@ input[type = "search"]{
 
 .footer-list{
     display: flex;
+    flex-wrap: wrap;
     padding-bottom: 30px;
     border-bottom: 1px solid #4a4a4a;
 }
@@ -316,6 +317,7 @@ input[type = "search"]{
 
 .footer-bottom{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 60px;
 }
