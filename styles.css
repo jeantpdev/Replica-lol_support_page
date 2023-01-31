@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    color: #1a1d21;
+    background-color: #fff;
+    text-rendering: optimizeLegibility;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* con flex organizamos el contenido del navbar (navbar-derecha y navbar-izquierda) de la manera horizontal*/
+.navbar {
+    display: flex;
+    background-color: #111111;
+    width: 100%;
+    justify-content: space-between;
+    height: 80px;
+}
+
+/*El contenido de riot-logo(es un div) se acomoda de manera horizontal y vertical para centrarlos*/
+
+.riot-bar-logo {
+    display: inline-flex;
+    position: relative;
+}
+
+.riot-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Icono del navbar */
+.riot__logo {
+    fill: #ffffff;
+    margin: 0;
+    /*position: relative;
+    display: flex;*/
+}
+
+/*color cuando se pase por encima el mouse*/
+.riot__logo:hover,
+.riot__desplegable:hover {
+    fill: #c20f0f;
+    transition: all 0.3s ease;
+}
+
+
+/* Personalizacion de la flecha */
+.riot__desplegable {
+    margin-left: 5px;
+    fill: #7e7e7e;
+    width: 8px;
+    height: 5px;
+}
+
+/* Se acomoda todo el contenido del navbar-izquierda de forma horizontal con flex*/
+.navbar-izquierda {
+    display: flex;
+    align-items: center;
+    font-family: "Arial";
+    padding-left: 36px;
+}
+
+/* La lista y los elementos por default van de forma vertical y con flex, se puede colocar horizontal */
+.navbar-izquierda__lista {
+    display: flex;
+    padding: 0;
+    margin-left: 18px;
+}
+
+/* Teniendo flex en la lista (navbar-izquierda__lista), los elementos se posicionan centrados de manera vertical y horizontalmente */
+/* con display: inline; se obtiene que el hover, solo afecte al espacio que cubren los elementos p.
+Si tuviese cualquier otro display, el hover va a afectar al bloque entero*/
+.navbar-izquierda__item p,
+.navbar-derecha__item p {
+    display: inline;
+    color: #f9f9f9;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: .08em;
+    padding: 7.5px 16px;
+    margin-right: 4px;
+    text-transform: uppercase;
+    margin: auto;
+    height: 66px;
+}
+
+.navbar-izquierda__item p:hover {
+    background: rgba(128, 128, 128, .3);
+    border-radius: 6.4px;
+}
+
+.navbar-izquierda__item a,
+.navbar-derecha__item a {
+    text-decoration: none;
+}
+
+.navbar-derecha {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*.navbar-derecha__lista {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+
+.navbar-derecha__item {
+    display: flex;
+    padding-right: 36px;
+}
+
+.navbar-derecha__item p {
+    color: #f9f9f9;
+    text-decoration: none;
+    list-style: none;
+}
+
+.search-container {
+    background-image: url(//theme.zdassets.com/theme_assets/43400/ec321e24d47d73af75c31e19e189d52ca46661e4.jpg);
+    height: 438px;
+    text-align: center;
+}
+
+.search__lol-logo {
+    display: inline-block;
+    margin-top: 74px;
+    justify-content: center;
+}
+
+
+.search-content {
+    padding-top: 28px;
+}
+
+.search{
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-box #query{
+    height: 60px;
+    padding: 0 55px 0 55px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #1a1d21;
+    background-color: #fff;
+    background-clip: inherit;
+    transition: border 0.3s ease;
+    border: 1px solid #bac2cc !important;
+}
+
+input[type = "search"]{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 6px 12px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #bac2cc;
+    border-radius: 0;
+}
+
+.option-list-inner {
+    padding: 30px 0px 30px 0px;
+    max-width: 1070px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.custom-block a {
+    display: block;
+}
+
+.custom-block__title {
+    display: inline-block;
+    max-width: 161px;
+    font-size: 0.7em;
+    margin-bottom: 5px;
+    font-weight: 800;
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1a1d21;
+    transition: all 0.3s ease;
+    min-height: 120px;
+}
+
+.custom-block__image {
+    width: auto;
+    max-height: 100px;
+}
+
+.category-list__title{
+    display: block;
+    margin-bottom: 70px;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.container{
+    padding: 70px 0 80px;
+}
+
+.container-inner{
+    max-width: 1070px;
+    margin: 0 auto;
+}
+
+.category-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+    list-style: none;   
+    text-align: center;
+    padding: 20px;
+    color:#111111
+}
+
+
+.category-list-item{
+    border: 1px solid #d2d2d2;
+    position: relative;
+    padding: 10px 20px 10px;
+}
+
+.category-list-item__link img{
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    text-decoration: none;
+
+}
+
+.category-list-item__link span{
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 1px;
+    color: #1a1d21;
+}
+
+
+.footer-container{
+    display: block;
+    padding: 50px 30px;
+    background-color: #1d1d1d;
+}
+
+.footer-content{
+    max-width: 1070px;
+    margin: 0 auto;
+}
+
+.footer-list{
+    display: flex;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #4a4a4a;
+}
+
+.footer-referencia, .footer-siguenos, .footer-juegos{
+    margin-right: 80px;
+}
+
+.footer-title{
+    margin-bottom: 40px;
+    font-size: 11pt;
+    font-weight: 700;
+    line-height: 1.4;
+    color: white;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.footer-list__item{
+    font-size: 10pt;
+    display: inline-block;
+    color: #aaaaaa;
+    text-decoration: none;
+    transition: all;
+    transition: all 0.15s ease-in-out;
+    margin: 10px 0;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+.footer__riot-logo{
+    display: block;
+    width: 110px;
+    height: 40px;
+}
+
+.footer-text{
+    max-width: 600px;
+}
+
+.footer__copyright{
+    display: inline-block;
+    color: #aaaaaa;
+    font-size: 11pt;
+    line-height: 1.4;
+}
+
